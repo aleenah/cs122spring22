@@ -12,11 +12,7 @@ public abstract class Person {
 	}
 	
 	public int getAge() {
-		return this.age;
-	}
-	
-	public void setAge(int age) {
-		this.age = age;
+		return age;
 	}
 	
 	public abstract void printName();
@@ -28,4 +24,3 @@ public abstract class Person {
 
 	
 }
-
