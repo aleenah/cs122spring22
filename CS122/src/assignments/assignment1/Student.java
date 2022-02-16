@@ -1,7 +1,7 @@
 package assignments.assignment1;
 
 public class Student extends Person {
-	public String status = "Freshman";
+	public static final String status = "Freshman";
 	public Student(String name, String address, int phoneNum, String email) {
 		super(name, address, phoneNum, email);
 	}
