@@ -4,26 +4,23 @@ public class Sports implements Comparable<Sports>{
 	private final  String name;
 	private final int players;
 	
-	public Sports(String eName, int numPlayers) {
-		name = eName;
-		players = numPlayers;
+	public Sports(String name, int players) {
+		this.name = name;
+		this.players = players;
 	}
 	
 	@Override
-	public int compareTo(Sports o) {
-		int result = 0;
-		if (name.equals(o.getName()))
-			result = name.compareTo(o.getName());
-		return result;
+	public int compareTo(Sports other) {
+		return this.name.compareTo(other.getName());
 	}
 
-	public boolean equal(Object other) {
-		return name.equals(((Sports) other).getName());
+	public boolean equals(Object other) {
+		return this.name.equals(((Sports) other).getName());
 		
 	}
 	
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public int getPlayers() {
@@ -31,7 +28,7 @@ public class Sports implements Comparable<Sports>{
 	}
 	
 	public String toString() {
-		return name + " " + players + "\n";
+		return this.name + " " + this.players + "\n";
 	}
 	
 	public static void main(String[] args) {
