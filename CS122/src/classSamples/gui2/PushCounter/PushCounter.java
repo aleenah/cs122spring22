@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 
 public class PushCounter extends Application {
 	private int count;
-	private Text countText;
+	private Text countText; //from class Text, is like String but for javafx, has more properties like color etc. 
 
 	// --------------------------------------------------------------------
 	// Presents a GUI containing a button and text that displays
@@ -28,11 +28,11 @@ public class PushCounter extends Application {
 		countText = new Text("Pushes: 0");
 
 		Button push = new Button("Push Me!");
-		push.setOnAction(this::processButtonPress);
+		push.setOnAction(this::processButtonPress); //binds method to button action
 
 		FlowPane pane = new FlowPane(push, countText);
 		pane.setAlignment(Pos.CENTER);
-		pane.setHgap(20);
+		pane.setHgap(20); //horizontal gap
 		pane.setStyle("-fx-background-color: cyan");
 
 		Scene scene = new Scene(pane, 300, 100);
@@ -45,7 +45,7 @@ public class PushCounter extends Application {
 	// --------------------------------------------------------------------
 	// Updates the counter and text when the button is pushed.
 	// --------------------------------------------------------------------
-	public void processButtonPress(ActionEvent event) {
+	public void processButtonPress(ActionEvent event) { //ActionEvent is an object
 		count++;
 		countText.setText("Pushes: " + count);
 	}

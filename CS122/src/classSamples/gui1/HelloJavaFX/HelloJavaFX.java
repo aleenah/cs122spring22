@@ -16,11 +16,11 @@ public class HelloJavaFX extends Application {
 	// Creates and displays two Text objects in a JavaFX window.
 	// --------------------------------------------------------------------
 	public void start(Stage primaryStage) {
-		Text hello = new Text(50, 50, "Hello, JavaFX!");
+		Text hello = new Text(50, 50, "Whore");
 		Text question = new Text(120, 80, "How's it going?");
 
 		Group root = new Group(hello, question);
-		Scene scene = new Scene(root, 300, 120, Color.LIGHTGREEN);
+		Scene scene = new Scene(root, 300, 120, Color.KHAKI);
 
 		primaryStage.setTitle("A JavaFX Program");
 		primaryStage.setScene(scene);

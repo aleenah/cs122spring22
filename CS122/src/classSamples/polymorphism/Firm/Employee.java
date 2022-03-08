@@ -25,7 +25,7 @@ public class Employee extends StaffMember {
 	public String toString() {
 		String result = super.toString();
 
-		result += "\nSocial Security Number: " + socialSecurityNumber + "\nVacation Days: " + (String.format("%.2f", this.vacationDays()));
+		result += "\nSocial Security Number: " + socialSecurityNumber + "\nVacation Days: " + (String.format("%.2f", this.Vacation()));
 
 		return result;
 	}
@@ -37,7 +37,7 @@ public class Employee extends StaffMember {
 		return payRate;
 	}
 	
-	public double vacationDays() {
+	public double Vacation() {
 		return 28;
 	}
 }

@@ -14,7 +14,7 @@ public class Volunteer extends StaffMember {
 	}
 
 	public String toString() {
-		return super.toString() + "\nVacation Days: " + this.vacationDays();
+		return super.toString() + "\nVacation Days: " + this.Vacation();
 	}
 	// -----------------------------------------------------------------
 	// Returns a zero pay value for this volunteer.
@@ -23,7 +23,7 @@ public class Volunteer extends StaffMember {
 		return 0.0;
 	}
 	
-	public double vacationDays() {
+	public double Vacation() {
 		return 0;
 	}
 }
