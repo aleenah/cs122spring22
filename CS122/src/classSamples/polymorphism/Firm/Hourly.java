@@ -5,7 +5,7 @@ package classSamples.polymorphism.Firm;//***************************************
 //********************************************************************
 
 public class Hourly extends Employee {
-	private int hoursWorked;
+	protected int hoursWorked;
 
 	// -----------------------------------------------------------------
 	// Constructor: Sets up this hourly employee using the specified
@@ -30,9 +30,6 @@ public class Hourly extends Employee {
 	// -----------------------------------------------------------------
 	public double pay() {
 		double payment = payRate * hoursWorked;
-
-		hoursWorked = 0;
-
 		return payment;
 	}
 	
