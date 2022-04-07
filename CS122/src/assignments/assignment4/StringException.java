@@ -1,4 +1,4 @@
-package assignments.week4;
+package assignments.assignment4;
 
 public class StringException extends Exception {
 	StringException(String message) {
