@@ -52,6 +52,7 @@ public class IntListTest {
 			System.out.println("Enter integer you want to replace it with: ");
 			list.replace(scnr.nextInt(), scnr.nextInt()); 
 			break;
+			
 		default: 
 			System.out.println("Sorry, invalid choice");
 		}

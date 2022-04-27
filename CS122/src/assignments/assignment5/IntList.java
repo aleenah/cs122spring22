@@ -1,5 +1,4 @@
 package assignments.assignment5;
-import java.util.LinkedList;
 
 public class IntList {
 	private IntNode front;
@@ -41,6 +40,7 @@ public class IntList {
 			temp = temp.next;
 		}
 		System.out.println("\nList length: " + length());
+		System.out.println("Print Value: " + toString());
 		System.out.println("\n----------------------\n");
 	}
 	
@@ -66,13 +66,20 @@ public class IntList {
 	} 
 	
 	public void replace(int oldInt, int newInt) {
-		for (IntNode n = front; n.next != null; n = n.next ) {
-			if (n.equals(oldInt)) {
-				System.out.print("test");
+		for (IntNode n = front; n != null; n = n.next ) {
+			if (n.val == oldInt) {
+				n.val = newInt;
 			}
 		}
 	}
 	
+	public String toString() {
+		String s = "";
+		for (IntNode n = front; n != null; n = n.next) {
+			s = s + n.val + " ";
+		}
+		return s;
+	}
 	
 	private class IntNode {
 		public int val;
