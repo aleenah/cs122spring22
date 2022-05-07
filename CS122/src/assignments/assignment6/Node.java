@@ -1,7 +1,7 @@
 package assignments.assignment6;
 
 public class Node {
-	private Node next;
+	Node next;
 	private Object element;
 	
 	//----------------------------------------------------

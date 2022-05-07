@@ -1,7 +1,5 @@
 package assignments.assignment6;
 
-import assignments.assignment5.Node;
-
 public class LinkedStack implements StackADT {
 	private Node top; // reference to top of stack
 	
@@ -18,8 +16,8 @@ public class LinkedStack implements StackADT {
 	// ---------------------------------------------------
 	public void push(Object val) {
 		Node newnode = new Node(val);
-
 		if (isFull() != false) {
+			newnode.next = top;
 			top = newnode;
 		}
 	}
@@ -29,22 +27,20 @@ public class LinkedStack implements StackADT {
 	// is empty returns null.
 	// ---------------------------------------------------
 	public Object pop() {
-		Object temp = top.getElement();
-		if (top.getNext() != null) {
+		if (isEmpty()) {
+			return null;
+		} else {
+			Object temp = top.getElement();
 			top = top.getNext();
-		} return temp;
+			return temp;
+		}
 	}
 	
 	// ---------------------------------------------------
 	// Returns true if stack is empty, false otherwise.
 	// ---------------------------------------------------
 	public boolean isEmpty(){ 
-		if (top.getElement() == null) {
-			return true;
-		} else { 
-			return false;
-		}
-		
+		return top == null;
 	}
 
 	public boolean isFull() {
