@@ -16,7 +16,7 @@ public class LinkedStack implements StackADT {
 	// ---------------------------------------------------
 	public void push(Object val) {
 		Node newnode = new Node(val);
-		if (isFull() != false) {
+		if (!isFull()) {
 			newnode.next = top;
 			top = newnode;
 		}
