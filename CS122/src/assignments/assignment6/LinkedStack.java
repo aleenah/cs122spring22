@@ -1,5 +1,7 @@
 package assignments.assignment6;
 
+import java.util.*;
+
 public class LinkedStack implements StackADT {
 	private Node top; // reference to top of stack
 	
@@ -46,6 +48,24 @@ public class LinkedStack implements StackADT {
 	public boolean isFull() {
 		return false;
 	}
+
+	public void printStack() {
+		Node i = top;
+		while (i != null) {
+			System.out.println(i.getElement());
+			i = i.getNext();
+		}
+	}
 	
+	public LinkedStack removeElement(Object val) {
+		LinkedStack removedStack = new LinkedStack();
+		return removedStack;
+	}
 	
+	public LinkedStack reverseStack() {
+		LinkedStack reversed = new LinkedStack();
+		for (Node n = top; n != null; n = n.next ) {
+			reversed.push(n.getElement());
+		} return reversed;
+	}
 }

@@ -1,5 +1,7 @@
 package assignments.assignment6;
 
+import java.util.Stack;
+
 public class StackTest {
 	public static void main(String[] args) {
 	  StackADT stack = new LinkedStack ();
@@ -24,6 +26,28 @@ public class StackTest {
 	while (!stack.isEmpty()) 
 		System.out.print(stack.pop() + " ");
 		System.out.println();
-	
+
+
+		// Declare and instantiate a stack
+		LinkedStack stack2 = new LinkedStack();
+		//push some stuff on the stack
+		for (int i=0; i<10; i++)
+		stack2.push(i);
+		
+		// call printStack to print the stack
+		stack2.printStack();
+		
+		// call reverseStack to reverse the stack
+		LinkedStack reversedStack = stack2.reverseStack();
+		reversedStack.printStack();
+		
+		// call printStack to print the stack again
+		stack2.printStack();
+		
+		// call removeElement to remove all occurrences of the value 5
+		
+		// call printStack to print the original stack and the new stack
+		//stack2.printStack();
 	}
 }
+
